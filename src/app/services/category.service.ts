@@ -14,4 +14,5 @@ export class categoryService {
     {
         return this.http.get<Category[]>(environment.baseApiUrl + '/category/get');
     }
+   
 }
