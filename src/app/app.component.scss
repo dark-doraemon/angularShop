@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    background-color: #fff;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#nav {
+    list-style: none;
+    display: flex;
+    
+}
+
+#nav>li>a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0px 18px;
+    display: block;
+
+}
+
+#nav>li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav>li:hover>a {
+    color: rgb(232, 232, 48);
+}
+
+.fg--search {
+    background: white;
+    position: relative;
+    width: 300px;
+}
+
+.form-group.fg--search {
+
+    margin-top: 10px;
+}
+
+
+
+.fg--search input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    display: block;
+    border-top: -10px;
+}
+
+.fg--search button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 10px;
+    z-index: 1;
+}
+
+#header .btn-shopping {
+    padding: 0 18px;
+
+}
+
+#header .shopping-icons {
+    line-height: 50px;
+    color: #000;
+    text-decoration: none;
+
+}
+
+#header .btn-shopping:hover {
+    cursor: pointer;
+}
+

@@ -1,55 +1,74 @@
-<div style="background-color: whitesmoke; width: max-width ;height: 100vh;">
+<div style="background-color: whitesmoke; width: max-width;margin-top: 5%;">
 
-    <!-- Nav -->
-    <div class="nav">
-        <ul class="nav-list">
-            <li>logo here</li>
-        </ul>
-
-        <ul class="nav-list">
-            <li class="search">
-                <input>
-            </li>
-        </ul>
-
-        <ul class="nav-list">
-
-            <li class="nav_item">
-                <button class="btn_dangNhap">Dang nhap</button>
-            </li>
-
-            <li class="nav_item">
-                <button class="btn_dangKy">Dang ki</button>
-            </li>
-        </ul>
-
-        <ul class="nav-list">
-            <li class="btn_gioHang">
-                <button>Gio hang</button>
-            </li>
-        </ul>
-
-    </div>
+    <!-- Nav
+        <div class="nav">
+            <ul class="nav-list">
+                <li>logo here</li>
+            </ul>
+    
+            <ul class="nav-list">
+                <li class="search">
+                    <input>
+                </li>
+            </ul>
+    
+            <ul class="nav-list">
+    
+                <li class="nav_item">
+                    <button class="btn_dangNhap">Dang nhap</button>
+                </li>
+    
+                <li class="nav_item">
+                    <button class="btn_dangKy">Dang ki</button>
+                </li>
+            </ul>
+    
+            <ul class="nav-list">
+                <li class="btn_gioHang">
+                    <button>Gio hang</button>
+                </li>
+            </ul>
+    
+        </div> -->
     <div class="column-layout">
-
         <!-- categories -->
         <div class="left-column">
             <h2 style="text-align: center;">Categories</h2>
-            <!-- <div class="categories" *ngFor="let c of categories">{{c.categoryName}}</div> -->
+            <div class="categories" (click)="handleGetAll()">All</div>
+            <div class="categories" *ngFor="let c of categories" (click)="handleGetProductsByCategory(c)">
+                {{c.categoryName}}
+            </div>
         </div>
 
         <!-- phần items -->
         <div class="right-column">
             <div style="display: flex;justify-content: flex-end;">
-                <div>...sản phẩm |</div>
+                <div>{{products.length}} sản phẩm |</div>
 
                 <div style="margin-left: 0.5%;">Hiển thị theo:
                     <select style="border: none;font-weight: bold">
                         <option>Sắp xếp sản phẩm</option>
-                        <option>Giá tăng dần</option>
-                        <option>Giá giảm dần</option>
+                        <option (click)="increasingSort()" value="desc">Giá tăng dần</option>
+                        <option (click)="decreasingSort()" value="asc">Giá giảm dần</option>
                         <option>A-Z</option>
                     </select>
+                </div>
+            </div>
+
+            <div class="products">
+                <div  *ngFor="let p of products" class="full-product">
+                    <div class="product-image">
+                        <img height="150" width="150"
+                        src={{p.img}} >
+                    </div>
+    
+                    <div class="product-details">
+                        <h6 class='product-name'>
+                            <a routerLink="/products/{{p.productName}}">{{p.productName}}</a>
+                        </h6>
+                        <h6>Price : {{p.productPrice | currency:'VND' }}</h6>
+                        <h6>{{p.productDescription}}</h6>
+                    </div>
                 </div>
             </div>
         </div>

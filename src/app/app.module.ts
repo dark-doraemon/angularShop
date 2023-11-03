@@ -8,6 +8,8 @@ import { LoadProductsComponent } from './components/load-products/load-products.
 import { LoadCategoriesComponent } from './components/load-categories/load-categories.component';
 import { ProductViewComponent } from './components/product-view/product-view.component';
 import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { DetailsproductComponent } from './components/detailsproduct/detailsproduct.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +17,9 @@ import { HomeComponent } from './components/home/home.component';
         LoadProductsComponent,
         LoadCategoriesComponent,
         ProductViewComponent,
-        HomeComponent
+        HomeComponent,
+        NotFoundComponent,
+        DetailsproductComponent
     ],
     imports: [
         BrowserModule,

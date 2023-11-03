@@ -15,7 +15,11 @@ export class productService {
     }
 
     getAllProducts() {
-        console.log(this.url + '/product/get');
         return this.http.get<Product[]>(this.url + '/product/get')
+    }
+    
+    getAllProductsByCategoryId(categoryId : string)
+    {
+        return this.http.get<Product[]>(this.url + '/product/get/' + categoryId)
     }
 }

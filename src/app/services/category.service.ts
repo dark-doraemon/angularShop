@@ -10,9 +10,10 @@ export class categoryService {
 
     constructor(private http: HttpClient) { }
 
-    getAllCategories()
-    {
+    getAllCategories() {
         return this.http.get<Category[]>(environment.baseApiUrl + '/category/get');
     }
+
    
+
 }
