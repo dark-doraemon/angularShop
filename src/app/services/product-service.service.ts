@@ -22,4 +22,9 @@ export class productService {
     {
         return this.http.get<Product[]>(this.url + '/product/get/' + categoryId)
     }
+
+    getProductByProductId(productId : string)
+    {
+        return this.http.get<Product>(this.url + '/product/getbyproductid/' + productId)
+    }
 }

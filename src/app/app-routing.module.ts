@@ -9,16 +9,18 @@ import { DetailsproductComponent } from './components/detailsproduct/detailsprod
 const routes: Routes = [
     {
         path: '', component: HomeComponent,
-        // children :[
-        //     { path: 'productView', component: ProductViewComponent },
-        // ]
+        children: [
+            // { path: 'productView', component: ProductViewComponent },
+            // { path: 'detailsProduct/:productId', component: DetailsproductComponent },
+
+        ]
     },
-    { path : 'about', component: LoadCategoriesComponent},
-    { path : 'productView', component: ProductViewComponent },
-    { path : 'detailProduct', component: DetailsproductComponent},
+    { path: 'about', component: LoadCategoriesComponent },
+    { path: 'productView', component: ProductViewComponent },
+    { path: 'detailsProduct/:productId', component: DetailsproductComponent },
 
 
-    { path: '**',component: NotFoundComponent}
+    { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
