@@ -10,7 +10,7 @@ html {
 
 #header {
     background-color: #fff;
-    height: 50px;
+    height: 46px;
     position: fixed;
     top: 0px;
     left: 0;
@@ -22,8 +22,7 @@ html {
 
 #nav {
     list-style: none;
-    display: flex;
-    
+    display: inline-block;
 }
 
 #nav>li>a {
@@ -34,7 +33,7 @@ html {
 
 #nav li a {
     text-decoration: none;
-    line-height: 50px;
+    line-height: 46px;
     padding: 0px 18px;
     display: block;
 
@@ -67,9 +66,9 @@ html {
 
 .fg--search input {
     width: 100%;
-    padding: 10px 40px 10px 10px;
+    padding: 0px 30px 4px 10px;
     display: block;
-    border-top: -10px;
+
 }
 
 .fg--search button {
@@ -77,11 +76,11 @@ html {
     border: none;
     cursor: pointer;
     display: inline-block;
-    font-size: 20px;
+    font-size: 18px;
     position: absolute;
     top: 0;
     right: 0;
-    padding: 10px 10px;
+    padding: 2px 2px;
     z-index: 1;
 }
 
@@ -101,3 +100,14 @@ html {
     cursor: pointer;
 }
 
+.login {
+    display: flex;
+    list-style: none;
+}
+
+.login_item {
+    margin: 10px;
+    // padding: 10px;
+    position: relative;
+    left: 300px;
+}
