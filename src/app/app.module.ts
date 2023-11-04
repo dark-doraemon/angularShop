@@ -10,6 +10,7 @@ import { ProductViewComponent } from './components/product-view/product-view.com
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DetailsproductComponent } from './components/detailsproduct/detailsproduct.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { DetailsproductComponent } from './components/detailsproduct/detailsprod
         ProductViewComponent,
         HomeComponent,
         NotFoundComponent,
-        DetailsproductComponent
+        DetailsproductComponent,
+        CartComponent
     ],
     imports: [
         BrowserModule,

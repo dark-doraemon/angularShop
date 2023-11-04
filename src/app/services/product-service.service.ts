@@ -27,4 +27,25 @@ export class productService {
     {
         return this.http.get<Product>(this.url + '/product/getbyproductid/' + productId)
     }
+
+    localAddToCart(data : Product)
+    {
+        let cartData = [];
+        let localCart = localStorage.getItem('localCart');//lấy localCart trong localStorage
+        //nếu chưa có thì tạo
+        if(!localCart)
+        {
+            localStorage.setItem('localCart',JSON.stringify([data]));
+        }
+        //nếu có rồi 
+        else
+        {
+            // thì thì lấy các sp trong localCart add vào cartData
+            cartData = JSON.parse(localCart);
+            //thêm sản phẩm với vòa cartData
+            cartData.push(data);
+            //update lại localStorage
+            localStorage.setItem('localCart',JSON.stringify(cartData));
+        }
+    }
 }

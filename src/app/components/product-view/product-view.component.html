@@ -46,12 +46,12 @@
                 <div>{{products.length}} sản phẩm |</div>
 
                 <div style="margin-left: 0.5%;">Hiển thị theo:
-                    <select style="border: none;font-weight: bold">
+                    <select id = 'mySelect' style="border: none; font-weight: bold" (change)="sortProducts()">
                         <option>Sắp xếp sản phẩm</option>
-                        <option (click)="increasingSort()" value="desc">Giá tăng dần</option>
-                        <option (click)="decreasingSort()" value="asc">Giá giảm dần</option>
-                        <option>A-Z</option>
-                    </select>
+                        <option value="increasing">Giá tăng dần</option>
+                        <option value="decreasing">Giá giảm dần</option>
+                        <option value="A-Z">A-Z</option>
+                      </select>
                 </div>
             </div>
 
