@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,6 +9,8 @@ import { ProductViewComponent } from './components/product-view/product-view.com
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DetailsproductComponent } from './components/detailsproduct/detailsproduct.component';
+import { ImageSliderModule } from "./components/imageSlider/imageSlider.module";
+
 
 @NgModule({
     declarations: [
@@ -21,13 +22,13 @@ import { DetailsproductComponent } from './components/detailsproduct/detailsprod
         NotFoundComponent,
         DetailsproductComponent
     ],
+    providers: [],
+    bootstrap: [AppComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
-
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+        HttpClientModule,
+        ImageSliderModule
+    ]
 })
 export class AppModule { }
