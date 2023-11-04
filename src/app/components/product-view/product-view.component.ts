@@ -43,14 +43,45 @@ export class ProductViewComponent {
         })
     }
 
+    sortProducts()
+    {
+        const selectTag = document.getElementById('mySelect') as HTMLSelectElement
+        if(selectTag.value === 'increasing')
+        {
+            this.increasingSort()
+        }
+
+        if(selectTag.value === 'decreasing')
+        {
+            this.decreasingSort()
+        }
+
+        if(selectTag.value === 'A-Z')
+        {
+            this.alphabetSort()
+        }
+    }
+
     increasingSort() {
         this.products.sort((a, b) => {
             return a.productPrice - b.productPrice
         });
+        console.log('tang dan');
     }
+
     decreasingSort() {
         this.products.sort((a, b) => {
-            return b.productPrice - b.productPrice
+            return b.productPrice - a.productPrice
         });
+        console.log('giam dan');
+
+    }
+
+    alphabetSort()
+    {
+        this.products.sort((a, b) => {
+            return a.productName.localeCompare(b.productName)
+        });
+        console.log('a'.localeCompare('b'));
     }
 }

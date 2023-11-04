@@ -1,8 +1,25 @@
-<div style="margin-top: 5%;">
-    <img src="{{product.img}}">
-    <div>{{product.productName}}</div>
-    <div>{{product.productPrice}}</div>
-    <div>{{product.productDescription}}</div>
-    <div>{{product.category.categoryName}}</div>
+<div class="main-view">
+    <div class="row product">
+        <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12">
+            <img class="product-image" src="{{producData.img}}" alt="hinhanhsp">
+        </div>
 
+        <div class="col-xxl-6 col-xl-6 col-md-6 col-sm-12 col-12">
+            <div class="details">
+                <h1>{{producData.productName}}</h1>
+                <h3>Price: {{producData.productPrice | currency:'VND'}}</h3>
+                <h6>Category : {{producData.category.categoryName}}</h6>
+            </div>
+
+            <div>
+                <button class="btn btn-primary" (click)="addToCart()">Add to cart</button>
+                <button class="btn btn-primary ms-3">Buy now</button>
+            </div>
+        </div>
+
+        <div class="m-5">
+            <h2>Thông tin sản phẩm</h2>
+            <p>{{producData.productDescription}}</p>
+        </div>
+    </div>
 </div>
