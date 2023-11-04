@@ -11,6 +11,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DetailsproductComponent } from './components/detailsproduct/detailsproduct.component';
 import { ImageSliderModule } from "./components/imageSlider/imageSlider.module";
 
+import { CartComponent } from './components/cart/cart.component';
+
 
 @NgModule({
     declarations: [
@@ -20,7 +22,8 @@ import { ImageSliderModule } from "./components/imageSlider/imageSlider.module";
         ProductViewComponent,
         HomeComponent,
         NotFoundComponent,
-        DetailsproductComponent
+        DetailsproductComponent,
+        CartComponent
     ],
     providers: [],
     bootstrap: [AppComponent],

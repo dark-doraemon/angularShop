@@ -12,17 +12,24 @@ import { productService } from 'src/app/services/product-service.service';
 export class DetailsproductComponent implements OnInit {
     constructor(private activeRoute: ActivatedRoute, private productService: productService) { }
 
-    product: Product;
+    producData: Product;
 
     ngOnInit(): void {
         // this.id = this.activeRoute.snapshot.params['productId'];
         const id = this.activeRoute.snapshot.paramMap.get('productId');
         this.productService.getProductByProductId(id).subscribe({
             next:(product : Product) =>{
-                console.log(product);
-                this.product = product
+                this.producData = product
             }
         })
+    }
+    
+    addToCart()
+    {
+        if(this.producData)
+        {
+            this.productService.localAddToCart(this.producData);
+        }
     }
 }
 
