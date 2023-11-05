@@ -12,7 +12,7 @@ import { DetailsproductComponent } from './components/detailsproduct/detailsprod
 import { ImageSliderModule } from "./components/imageSlider/imageSlider.module";
 
 import { CartComponent } from './components/cart/cart.component';
-
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +23,8 @@ import { CartComponent } from './components/cart/cart.component';
         HomeComponent,
         NotFoundComponent,
         DetailsproductComponent,
-        CartComponent
+        CartComponent,
+        AboutComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],

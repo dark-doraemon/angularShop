@@ -107,19 +107,88 @@ html{
   width: 1.3em;
   fill: #b4b4b4;
 }
-#header .btn-shopping{
+#header .btn-cart{
     padding: 0 18px;
     margin-left: 18px;
 
 }
-#header .shopping-icons{
+#header .cart-icons{
     line-height: 50px;
     color:#000;
     text-decoration: none;
-   
+    font-weight: bold;
 }
 
 #header .btn-shopping:hover{
   cursor: pointer;
 }
 
+.login{
+  position: relative;
+  display: flex;
+  list-style: none;
+  padding: 0 18px;
+  color:#000;
+  font-size: 10px ;
+}
+.btn-login{
+  margin-top: 8px;
+  height: 32px;
+  width: 110px;
+  margin-right: 18px;
+  --primary-color: #645bff;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+.btn-login .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-login .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.btn-login .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.btn-login:hover {
+  background-color: var(--hover-color);
+}
+
+.btn-login:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.btn-login:hover .arrow:before {
+  right: 0;
+}
