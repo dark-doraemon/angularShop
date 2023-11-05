@@ -60,4 +60,15 @@ export class productService {
             localStorage.setItem('localCart',JSON.stringify(items));
         }
     }
+
+    updateProduct(product : Product)
+    {
+        console.log(product);
+        return this.http.post<Product>(environment.baseApiUrl + '/product/update',product);
+    }
+
+    removeProduct()
+    {
+        
+    }
 }

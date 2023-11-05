@@ -16,6 +16,8 @@ import { ManageProductsComponent } from './components/manage-products/manage-pro
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule} from '@angular/material/dialog';
 import { PopUpComponent } from './components/pop-up/pop-up.component'
+import { AboutComponent } from './components/about/about.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -39,7 +41,8 @@ import { PopUpComponent } from './components/pop-up/pop-up.component'
         HttpClientModule,
         ImageSliderModule,
         BrowserAnimationsModule,
-        MatDialogModule
+        MatDialogModule,
+        FormsModule
     ]
 })
 export class AppModule { }
