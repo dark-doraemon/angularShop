@@ -7,6 +7,7 @@ import { LoadCategoriesComponent } from './components/load-categories/load-categ
 import { DetailsproductComponent } from './components/detailsproduct/detailsproduct.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ManageProductsComponent } from './components/manage-products/manage-products.component';
+import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
     {
@@ -18,6 +19,7 @@ const routes: Routes = [
         ]
     },
     { path: 'manageProducts', component :ManageProductsComponent },
+    { path: 'about', component: AboutComponent },
     { path: 'productView', component: ProductViewComponent },
     { path: 'detailsProduct/:productId', component: DetailsproductComponent },
     { path: 'cart', component: CartComponent },
