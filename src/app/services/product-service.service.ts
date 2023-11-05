@@ -48,4 +48,16 @@ export class productService {
             localStorage.setItem('localCart',JSON.stringify(cartData));
         }
     }
+    removeItemFromLocal(productId : string)
+    {
+        let cartData = localStorage.getItem('localCart');//lấy localCart trong localStorage
+        if(cartData)
+        {
+            let items : Product[] = JSON.parse(cartData);
+            items = items.filter( (item) => item.productId !== productId)
+            
+            //sau khi filter xong thì set lại cho localStorage
+            localStorage.setItem('localCart',JSON.stringify(items));
+        }
+    }
 }
