@@ -10,10 +10,11 @@ import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DetailsproductComponent } from './components/detailsproduct/detailsproduct.component';
 import { ImageSliderModule } from "./components/imageSlider/imageSlider.module";
-
 import { CartComponent } from './components/cart/cart.component';
 import { ManageProductsComponent } from './components/manage-products/manage-products.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule} from '@angular/material/dialog';
+import { PopUpComponent } from './components/pop-up/pop-up.component'
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import { ManageProductsComponent } from './components/manage-products/manage-pro
         NotFoundComponent,
         DetailsproductComponent,
         CartComponent,
-        ManageProductsComponent
+        ManageProductsComponent,
+        PopUpComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -33,7 +35,9 @@ import { ManageProductsComponent } from './components/manage-products/manage-pro
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        ImageSliderModule
+        ImageSliderModule,
+        BrowserAnimationsModule,
+        MatDialogModule
     ]
 })
 export class AppModule { }

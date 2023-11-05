@@ -6,6 +6,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoadCategoriesComponent } from './components/load-categories/load-categories.component';
 import { DetailsproductComponent } from './components/detailsproduct/detailsproduct.component';
 import { CartComponent } from './components/cart/cart.component';
+import { ManageProductsComponent } from './components/manage-products/manage-products.component';
 
 const routes: Routes = [
     {
@@ -16,10 +17,10 @@ const routes: Routes = [
 
         ]
     },
-    { path: 'about', component: LoadCategoriesComponent },
+    { path: 'manageProducts', component :ManageProductsComponent },
     { path: 'productView', component: ProductViewComponent },
     { path: 'detailsProduct/:productId', component: DetailsproductComponent },
-    { path : 'cart',component: CartComponent},
+    { path: 'cart', component: CartComponent },
 
     { path: '**', component: NotFoundComponent }
 ];

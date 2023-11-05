@@ -1,1 +1,45 @@
-<p>manage-products works!</p>
+<div class="main">
+   
+    <div>
+        <button class="btn btn-danger" >Thêm</button>
+
+        <ng-template #modelTemplate>
+            <div>
+
+            </div>
+        </ng-template>
+    </div>
+    <!-- <div>
+        <table class="table table-bordered border-primary">
+            <thead>
+                <tr>
+                    <th>Product Img</th>
+                    <th>Product Name</th>
+                    <th>Product Category</th>
+                    <th>Prouduct Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let p of products">
+                    <td>
+                        <img src="{{p.img}}" width="100" height="100">
+                    </td>
+                    <td>
+                        {{p.productName}}
+                    </td>
+                    <td>{{p.category.categoryName}}</td>
+                    <td>{{p.productPrice | currency : 'VND'}}</td>
+                    <td>
+                        <button class="btn btn-danger">Delete</button>
+                        <button class="btn btn-danger">Sửa</button>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div> -->
+
+</div>
