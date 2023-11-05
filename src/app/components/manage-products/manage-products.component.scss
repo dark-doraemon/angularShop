@@ -1,5 +1,40 @@
 .main {
+    width: 100%;
     margin-top: 5%;
     align-items: center;
-    margin-left: 80%;
+    display: flex;
+}
+
+.left {
+    flex : 1
+}
+
+.right {
+    flex : 1;
+    position: sticky;
+    margin-top: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.right-form {
+    background-color: pink;
+    width: 50%;
+    height: 100%;
+    margin-top: -80%;
+}
+
+.form_row{
+    padding: 8px 0 ;
+    display: flex;
+}
+
+.form_label{
+    min-width : 30%;
+}
+
+.form_input{
+    flex : 1
 }
