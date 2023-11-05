@@ -13,6 +13,8 @@ import { ImageSliderModule } from "./components/imageSlider/imageSlider.module";
 
 import { CartComponent } from './components/cart/cart.component';
 import { AboutComponent } from './components/about/about.component';
+import { ManageProductsComponent } from './components/manage-products/manage-products.component';
+
 
 @NgModule({
     declarations: [
@@ -24,7 +26,11 @@ import { AboutComponent } from './components/about/about.component';
         NotFoundComponent,
         DetailsproductComponent,
         CartComponent,
+<<<<<<< HEAD
         AboutComponent,
+=======
+        ManageProductsComponent
+>>>>>>> 868703dd1590bd209671fc3e0c3db808bc4c0d64
     ],
     providers: [],
     bootstrap: [AppComponent],
