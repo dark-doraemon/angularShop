@@ -21,13 +21,13 @@ export class HomeComponent implements OnInit {
         })
         console.log(this.products)
     }
-    
+
     slides: SlideInterface[] = [
-        { url: 'https://th.bing.com/th/id/R.48ae7063896075ef412c1ecfbc0350c5?rik=es8RJROOMry9JQ&pid=ImgRaw&r=0', title: 'beach' },
-        { url: 'https://hinhanhdep.net/wp-content/uploads/2015/12/anh-cho-va-meo-29.jpg', title: 'boat' },
-        { url: 'https://hinhanhdep.net/wp-content/uploads/2015/12/anh-cho-va-meo-36.jpg', title: 'forest' },
-        { url: 'https://hinhanhdep.net/wp-content/uploads/2015/12/anh-cho-va-meo-28.jpg', title: 'city' },
-        { url: 'https://img.meta.com.vn/Data/image/2021/09/21/anh-meo-con-35.jpg', title: 'italy' },
+        { url: 'https://file.hstatic.net/200000722513/file/gearvn-pc-gaming-slider_c93d0e6bd9e547b8922314571e1d3ef2.jpg', title: '' },
+        { url: 'https://file.hstatic.net/200000722513/file/gearvn-mua-kem-pc-laptop-slider_f1a31ee0614d479d995b45fe48d06344.jpg', title: '' },
+        { url: 'https://file.hstatic.net/200000722513/file/6_20f8dbf6da254794805e8449bcff3adb.png', title: '' },
+        { url: 'https://file.hstatic.net/200000722513/file/gearvn_800x400_52c710aad7be4c01b6aaa14e3b62ae08.jpg', title: '' },
+        { url: 'https://file.hstatic.net/200000722513/file/gearvn-man-hinh-slider_eaff9f7f61cc4f5e953239b3e3a608a9.jpg', title: '' },
     ];
 
 }

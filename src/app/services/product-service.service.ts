@@ -63,12 +63,17 @@ export class productService {
 
     updateProduct(product : Product)
     {
-        console.log(product);
-        return this.http.post<Product>(environment.baseApiUrl + '/product/update',product);
+        return this.http.put<Product>(environment.baseApiUrl + '/Product/Update/' + product.productId   ,product);
     }
 
-    removeProduct()
+    removeProduct(product : Product)
     {
-        
+        return this.http.delete(environment.baseApiUrl + '/product/delete/' + product.productId);
+    }
+
+    addItem(product : Product)
+    {
+        console.log(product);
+        return this.http.post<Product>(environment.baseApiUrl + '/Product/Post',product);
     }
 }
